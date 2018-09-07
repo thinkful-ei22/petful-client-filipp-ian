@@ -1,6 +1,7 @@
 import React from 'react';
 import Pet from './components/Pet';
-import Welcome from './components/welcome'
+import Welcome from './components/welcome';
+import Form from './components/Form';
 import {connect} from 'react-redux';
 import "./Dashboard.css";
 import { fetchAnimal } from './actions/animal';
@@ -16,6 +17,7 @@ export class Dashboard extends React.Component {
             return (
                 <div className="dashboard row">
                     <Welcome />
+                    {/* <Form /> */}
                     <Pet petToAdopt={this.props.cat}/>
                     <Pet petToAdopt={this.props.dog}/>
                 </div>

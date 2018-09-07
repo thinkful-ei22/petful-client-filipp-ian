@@ -1,7 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { adoptCat } from '../actions/cat';
-import { adoptDog } from '../actions/dog';
 import "./Pet.css";
 import { adoptAnimal } from '../actions/animal';
 
@@ -16,11 +14,6 @@ class Pet extends React.Component {
     }
 
     onClick(e) {
-    //   if (e.target.id === "cat"){
-    //       this.props.dispatch(adoptCat());
-    //   } else {
-    //       this.props.dispatch(adoptDog());
-    //   }
         console.log(e.target.id)
         this.props.dispatch(adoptAnimal(e.target.id))
     }

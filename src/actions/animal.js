@@ -33,6 +33,23 @@ export const adoptAnimalError = error => ({
   error
 });
 
+export const ADD_ANIMAL_REQUEST = 'ADD_ANIMAL_REQUEST';
+export const addAnimalRequest = () => ({
+  type: ADD_ANIMAL_REQUEST
+});
+
+export const ADD_ANIMAL_SUCCESS = 'ADD_ANIMAL_SUCCESS';
+export const addAnimalSuccess = animal => ({
+  type: ADD_ANIMAL_SUCCESS,
+  animal
+});
+
+export const ADD_ANIMAL_ERROR = 'ADD_ANIMAL_ERROR';
+export const addAnimalError = error => ({
+  type: ADD_ANIMAL_ERROR,
+  error
+});
+
 
 export const fetchAnimal = (species) => (dispatch) => {
   dispatch(fetchAnimalRequest());
@@ -60,5 +77,21 @@ export const adoptAnimal = (species) => (dispatch) => {
     dispatch(fetchAnimal(species));
   })
   .catch(err => {dispatch(adoptAnimalError(err));
+  });
+}
+
+export const addAnimal = (animal) => (dispatch) => {
+  dispatch(addAnimalRequest());
+  return fetch(`${API_BASE_URL}/api/${animal.species}`, {
+    method: 'POST',
+    headers: {
+      'content-type' : 'application/json'
+    },
+    body: JSON.stringify(animal)
+  })
+  .then(() => {
+    dispatch(addAnimalSuccess());
+  })
+  .catch(err => {dispatch(addAnimalError(err));
   });
 }
