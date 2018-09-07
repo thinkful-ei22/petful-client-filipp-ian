@@ -10,8 +10,7 @@ Users can view the cat and dog that are currently up for adoption, then if they 
 
 ## Screenshots
 ### Main Page
-![screen shot 2018-09-05 at 8 00 41 pm](https://user-images.githubusercontent.com/38081935/45132700-c40fd880-b146-11e8-9ec8-250b1787e5fb.png)
-
+![screen shot 2018-09-07 at 12 44 09 pm](https://user-images.githubusercontent.com/38081935/45239904-c0da3100-b29b-11e8-9609-774e0b491f01.png)
 ## Target Audience
 Cat and dog lovers alike who are looking to adopt an animal, and conscious of the fact that some animals that do not get adopted have to be put down. 
 
