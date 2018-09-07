@@ -8,13 +8,12 @@ import {
 } from '../actions/cat';
 
 const initialState = {
-  data: null,
+  data: [],
   error: null,
   loading: false
 };
 
-
-export default function reducer(state = initialState, action) {
+export default function catReducer(state = initialState, action) {
   if (action.type === FETCH_CAT_REQUEST) {
     return Object.assign({}, state, {
       loading: true

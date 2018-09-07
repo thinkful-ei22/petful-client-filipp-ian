@@ -8,14 +8,13 @@ import {
 } from '../actions/dog';
 
 const initialState = {
-  data: null,
+  data: [],
   error: null,
   loading: false
 };
 
 
-export default function reducer(state = initialState, action) {
-
+export default function dogReducer(state = initialState, action) {
   if (action.type === FETCH_DOG_REQUEST) {
     return Object.assign({}, state, {
       loading: true

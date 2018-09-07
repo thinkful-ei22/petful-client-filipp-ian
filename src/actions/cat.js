@@ -33,13 +33,12 @@ export const adoptCatError = error => ({
   error
 });
 
-
-
 export const fetchCat = () => (dispatch) => {
   dispatch(fetchCatRequest());
   return fetch(`${API_BASE_URL}/api/cat`)
     .then(res => res.json())
     .then((cat) => {
+      console.log("hey its the cat!!",cat)
       dispatch(fetchCatSuccess(cat));
     })
     .catch(err => {dispatch(fetchCatError(err));

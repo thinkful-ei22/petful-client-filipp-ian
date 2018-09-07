@@ -2,13 +2,13 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 import catReducer from './reducers/cat';
 import dogReducer from './reducers/dog';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(
+export default createStore(
   combineReducers({
     cat: catReducer,
     dog: dogReducer
   }),
-  applyMiddleware(thunk));
+  composeWithDevTools(applyMiddleware(thunk)));
 
-export default store;
 
