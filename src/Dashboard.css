@@ -6,6 +6,7 @@ section {
 section img {
     height: auto;
     width: 600px;
+    
 }
 .animal-section {
     column-span: 1;
