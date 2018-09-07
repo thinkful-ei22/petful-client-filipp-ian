@@ -1,4 +1,5 @@
 import React from 'react';
+import Pet from './components/Pet';
 
 
 class Dashboard extends React.Component {
@@ -13,6 +14,17 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div className="dashboard">
+                <Pet petToAdopt = {this.props.catToAdopt}/>
+                <Pet petToAdopt = {this.props.dogToAdopt}/>
+            </div>
+        );
+    }
+}
+
+export default Dashboard;
+
+
+{/* <div className="dashboard">
                 <section className="cat-section">
                     <header>
                         <h2>{this.props.catToAdopt.name}</h2>
@@ -52,9 +64,4 @@ class Dashboard extends React.Component {
                         <button type="button">Adopt Me!</button>
                     </main>
                 </section>
-            </div>
-        );
-    }
-}
-
-export default Dashboard;
+            </div> */}
