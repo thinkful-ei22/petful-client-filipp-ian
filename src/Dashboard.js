@@ -1,8 +1,10 @@
 import React from 'react';
 import Pet from './components/Pet';
+import Welcome from './components/welcome'
 import {connect} from 'react-redux';
 import { fetchCat } from './actions/cat';
 import { fetchDog } from './actions/dog';
+import "./Dashboard.css";
 
 
 export class Dashboard extends React.Component {
@@ -13,7 +15,8 @@ export class Dashboard extends React.Component {
 
     render() {
             return (
-                <div className="dashboard">
+                <div className="dashboard row">
+                    <Welcome />
                     <Pet petToAdopt={this.props.cat} animal="cat"/>
                     <Pet petToAdopt={this.props.dog} animal="dog"/>
                 </div>

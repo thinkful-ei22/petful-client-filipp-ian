@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { adoptCat } from '../actions/cat';
 import { adoptDog } from '../actions/dog';
+import "./Pet.css";
 
 
 class Pet extends React.Component {
@@ -23,7 +24,7 @@ class Pet extends React.Component {
 
     render() {
         return (
-                <section className="cat-section">
+                <section className="animal-section">
                     <header>
                         <h2>{this.props.petToAdopt.name}</h2>
                         <img src={this.props.petToAdopt.imageURL} alt={this.props.petToAdopt.imageDescription}/>

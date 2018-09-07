@@ -1,0 +1,45 @@
+section {
+    display: block;
+    width: 750px;
+    height: 100vh;
+}
+section img {
+    height: auto;
+    width: 600px;
+}
+.animal-section {
+    column-span: 1;
+    margin-left: 50px;
+}
+.dashboard {
+    column-count: 2;
+}
+section dt {
+    font-weight: bolder
+}
+
+.animal-section h2 {
+    font-size: 60px;
+    margin-top: 0px;
+}
+.animal-section {
+    font-size: 40px;
+}
+.animal-section button {
+    width: 300px;
+    height: 100px;
+    font-size: 35px;
+    background-color: aqua
+}
+.welcome {
+    column-span: all;
+}
+.welcome h1 {
+    text-align: center;
+    font-size: 70px;
+}
+.welcome p {
+    font-size: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
