@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Dashboard from './Dashboard';
 import registerServiceWorker from './registerServiceWorker';
+import store from './store';
+
+
 
 const fluffy = {
     imageURL: 'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
